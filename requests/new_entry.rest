@@ -1,0 +1,13 @@
+POST http://localhost:3001/entries
+Content-Type: application/json
+
+{
+    "fish": "k",
+    "date": "5",
+    "length": 4,
+    "weigh": 0,
+    "lure": "mikado",
+    "place": "kivikko",
+    "time": "16.30",
+    "person": "Aks"
+}

@@ -3,6 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
+app.use(express.static('build'))
 app.use(bodyParser.json())
 app.use(cors())
 
@@ -52,15 +53,11 @@ let entries = [
   }
 ]
 
-app.get('/', (req, res) => {
-  res.send('<h1>Hello World!</h1>')
-})
-
-app.get('/entries', (req, res) => {
+app.get('/api/entries', (req, res) => {
   res.json(entries)
 })
 
-app.get('/entries/:id', (request, response) => {
+app.get('/api/entries/:id', (request, response) => {
   const id = Number(request.params.id)
   const entry = entries.find(entry => entry.id === id)
 
@@ -71,14 +68,14 @@ app.get('/entries/:id', (request, response) => {
   }
 })
 
-app.delete('/entries/:id', (request, response) => {
+app.delete('/api/entries/:id', (request, response) => {
   const id = Number(request.params.id)
   entries = entries.filter(entry => entry.id !== id)
 
   response.status(204).end()
 })
 
-app.post('/entries', (request, response) => {
+app.post('/api/entries', (request, response) => {
   const body = request.body
   
   if (!body.fish || !body.date || !body.person) {
@@ -90,7 +87,7 @@ app.post('/entries', (request, response) => {
     fish: body.fish,
     date: body.date,
     length: body.lengt || "-",
-    weigh: body.weigh || "-",
+    weight: body.weight || "-",
     lure: body.lure || "-",
     place: body.place || "-",
     time: body.time || "-",

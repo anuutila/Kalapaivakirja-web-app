@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const Entry = require('./models/entry')
 
 app.use(express.static('build'))
 app.use(bodyParser.json())
@@ -17,62 +18,57 @@ const logger = (request, response, next) => {
 
 app.use(logger)
 
-let entries = [
-  {
-    id: 1,
-    fish: "kuha",
-    date: "5.5.2022",
-    length: 44,
-    weigh: 0.7,
-    lure: "mikado saira",
-    place: "palosaaren kivikko",
-    time: "16.30",
-    person: "Akseli"
-  },
-  {
-    id: 2,
-    fish: "ahven",
-    date: "7.6.",
-    length: "-",
-    weight: 0.3,
-    lure: "huntershad",
-    place: "kotasaari",
-    time: "20.00",
-    person: "Elmeri"
-  },
-  {
-    id: 3,
-    fish: "hauki",
-    date: "20.7.",
-    lengt: 65,
-    weight: 2.0,
-    lure: "jesse-vaappu",
-    place: "ruuhiniemi",
-    time: "13.00",
-    person: "Akseli"
+const formatEntry = (entry) => {
+  return {
+    id: entry._id,
+    fish: entry.fish,
+    date: entry.date,
+    length: entry.length,
+    weight: entry.weight,
+    lure: entry.lure,
+    place: entry.place,
+    time: entry.time,
+    person: entry.person
   }
-]
+}
 
-app.get('/api/entries', (req, res) => {
-  res.json(entries)
+app.get('/api/entries', (request, response) => {
+  Entry
+    .find({}, {__v: 0})
+    .then(entries => {
+      response.json(entries.map(formatEntry))
+    })
+    .catch(error => {
+      console.log(error)
+    })
 })
 
 app.get('/api/entries/:id', (request, response) => {
-  const id = Number(request.params.id)
-  const entry = entries.find(entry => entry.id === id)
-
-  if ( entry ) {
-    response.json(entry)
-  } else {
-    response.status(404).end()
-  }
+  Entry
+    .findById(request.params.id)
+    .then(entry => {
+      if (entry) {
+        response.json(formatEntry(entry))
+      } else {
+        response.status(404).end()
+      }
+    })
+    .catch(error => {
+      console.log(error)
+      response.status(400).send({ error: 'malformatted id' })
+    })
 })
 
 app.delete('/api/entries/:id', (request, response) => {
-  const id = Number(request.params.id)
-  entries = entries.filter(entry => entry.id !== id)
-
-  response.status(204).end()
+  Entry
+    .findByIdAndRemove(request.params.id)
+    .then(result => {
+      response.status(204).end()
+    })
+    .catch(error => {
+      console.log(error)
+      response.status(400).send({ error: 'malformatted id' })
+    })
 })
 
 app.post('/api/entries', (request, response) => {
@@ -82,21 +78,26 @@ app.post('/api/entries', (request, response) => {
     return response.status(400).json({error: 'kalalaji, päivämäärä tai saajan nimi puuttuu'})
   }
 
-  const entry = {
-    id: 5,
+  const entry = new Entry({
     fish: body.fish,
     date: body.date,
-    length: body.lengt || "-",
+    length: body.length || "-",
     weight: body.weight || "-",
     lure: body.lure || "-",
     place: body.place || "-",
     time: body.time || "-",
     person: body.person
-  }
+  })
 
-  entries = entries.concat(entry)
-
-  response.json(entry)
+  entry
+    .save()
+    .then(formatEntry)
+    .then(savedAndFormattedEntry => {
+      response.json(savedAndFormattedEntry)
+    })
+    .catch(error => {
+      console.log(error)
+    })
 })
 
 const error = (request, response) => {

@@ -100,6 +100,31 @@ app.post('/api/entries', (request, response) => {
     })
 })
 
+app.put('/api/entries/:id', (request, response) => {
+  const body = request.body
+
+  const entry = {
+    fish: body.fish,
+    date: body.date,
+    length: body.length || "-",
+    weight: body.weight || "-",
+    lure: body.lure || "-",
+    place: body.place || "-",
+    time: body.time || "-",
+    person: body.person
+  }
+
+  Entry
+    .findByIdAndUpdate(request.params.id, entry, { new: true })
+    .then(updatedEntry => {
+      response.json(formatEntry(updatedEntry))
+    })
+    .catch(error => {
+      console.log(error)
+    })
+
+})  
+
 const error = (request, response) => {
   response.status(404).send({error: 'unknown endpoint'})
 }

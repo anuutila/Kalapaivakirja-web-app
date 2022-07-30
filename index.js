@@ -27,6 +27,7 @@ const formatEntry = (entry) => {
     weight: entry.weight,
     lure: entry.lure,
     place: entry.place,
+    coordinates: entry.coordinates,
     time: entry.time,
     person: entry.person
   }
@@ -85,6 +86,7 @@ app.post('/api/entries', (request, response) => {
     weight: body.weight || "-",
     lure: body.lure || "-",
     place: body.place || "-",
+    coordinates: body.coordinates || "-",
     time: body.time || "-",
     person: body.person
   })
@@ -103,6 +105,12 @@ app.post('/api/entries', (request, response) => {
 app.put('/api/entries/:id', (request, response) => {
   const body = request.body
 
+  const regex = /^\-?[0-9]+\.[0-9]{2,},\s[0-9]+\.[0-9]{2,}$|^$/
+
+  if (!regex.test(body.coordinates)) {
+    return response.status(400).json({error: 'Koordinaattien formaatti virheellinen\nOikea muoto: "xx.xxxxxxx, yy.yyyyyyy" tai tyhjä\n(huomaa välilyönti)'})
+  }
+
   const entry = {
     fish: body.fish,
     date: body.date,
@@ -110,6 +118,7 @@ app.put('/api/entries/:id', (request, response) => {
     weight: body.weight || "-",
     lure: body.lure || "-",
     place: body.place || "-",
+    coordinates: body.coordinates || "-",
     time: body.time || "-",
     person: body.person
   }

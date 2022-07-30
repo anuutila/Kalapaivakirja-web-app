@@ -15,6 +15,7 @@ const Entry = mongoose.model('Entry', {
     weight: String,
     lure: String,
     place: String,
+    coordinates: String,
     time: String,
     person: String
 })

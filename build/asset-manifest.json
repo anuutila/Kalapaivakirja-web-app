@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5f54447.css",
-    "main.js": "/static/js/main.d16958b9.js",
+    "main.css": "/static/css/main.289cf48b.css",
+    "main.js": "/static/js/main.2681ed45.js",
     "static/media/jarvimaisema.jpg": "/static/media/jarvimaisema.84a75b164b53fcb5490a.jpg",
     "index.html": "/index.html",
-    "main.b5f54447.css.map": "/static/css/main.b5f54447.css.map",
-    "main.d16958b9.js.map": "/static/js/main.d16958b9.js.map"
+    "main.289cf48b.css.map": "/static/css/main.289cf48b.css.map",
+    "main.2681ed45.js.map": "/static/js/main.2681ed45.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5f54447.css",
-    "static/js/main.d16958b9.js"
+    "static/css/main.289cf48b.css",
+    "static/js/main.2681ed45.js"
   ]
 }

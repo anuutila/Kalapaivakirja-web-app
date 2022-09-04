@@ -4,9 +4,23 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const Entry = require('./models/entry')
 
-app.use(express.static('build'))
 app.use(bodyParser.json())
 app.use(cors())
+
+app.use(express.static('build', {
+  etag: true,
+  lastModified: true,
+  setHeaders: (res, path) => {
+    const hashRegExp = /\.[0-9a-f]{8,21}\./
+
+    if (path.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'no-cache');
+    } else if (hashRegExp.test(path)) {
+      res.setHeader('Cache-Control', 'max-age=31536001');
+      console.log('testataan toimiiko')
+    }
+  },
+}));
 
 const logger = (request, response, next) => {
   console.log('Method:', request.method)

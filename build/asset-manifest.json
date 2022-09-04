@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.82368a00.css",
-    "main.js": "/static/js/main.40802583.js",
+    "main.css": "/static/css/main.18744c01.css",
+    "main.js": "/static/js/main.8efd1947.js",
     "static/media/jarvimaisema.jpg": "/static/media/jarvimaisema.84a75b164b53fcb5490a.jpg",
+    "static/media/jarvimaisema2.jpg": "/static/media/jarvimaisema2.ab8966898989e3592693.jpg",
     "index.html": "/index.html",
-    "main.82368a00.css.map": "/static/css/main.82368a00.css.map",
-    "main.40802583.js.map": "/static/js/main.40802583.js.map"
+    "main.18744c01.css.map": "/static/css/main.18744c01.css.map",
+    "main.8efd1947.js.map": "/static/js/main.8efd1947.js.map"
   },
   "entrypoints": [
-    "static/css/main.82368a00.css",
-    "static/js/main.40802583.js"
+    "static/css/main.18744c01.css",
+    "static/js/main.8efd1947.js"
   ]
 }

@@ -51,6 +51,7 @@ app.get('/api/entries', (request, response) => {
   Entry
     .find({}, {__v: 0})
     .then(entries => {
+      response.setHeader('Cache-Control', 'no-cache');
       response.json(entries.map(formatEntry))
     })
     .catch(error => {

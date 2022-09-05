@@ -2,13 +2,13 @@
   "name": "Kalapäiväkirja",
   "icons": [
     {
-      "src": "app-icon.png",
+      "src": "app-icon-rounded.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "app-icon.png",
+      "src": "maskable-app-icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

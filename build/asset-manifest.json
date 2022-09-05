@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.74657689.css",
-    "main.js": "/static/js/main.1cb5faa2.js",
+    "main.js": "/static/js/main.ab038493.js",
     "static/media/jarvimaisema.webp": "/static/media/jarvimaisema.26e833afab93533ea7fd.webp",
     "static/media/jarvimaisema2.webp": "/static/media/jarvimaisema2.4866129c3a35d2fb1332.webp",
+    "service-worker.js": "/service-worker.js",
     "index.html": "/index.html",
     "main.74657689.css.map": "/static/css/main.74657689.css.map",
-    "main.1cb5faa2.js.map": "/static/js/main.1cb5faa2.js.map"
+    "main.ab038493.js.map": "/static/js/main.ab038493.js.map"
   },
   "entrypoints": [
     "static/css/main.74657689.css",
-    "static/js/main.1cb5faa2.js"
+    "static/js/main.ab038493.js"
   ]
 }

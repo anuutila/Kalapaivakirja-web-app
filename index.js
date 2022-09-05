@@ -11,13 +11,13 @@ app.use(express.static('build', {
   etag: true,
   lastModified: true,
   setHeaders: (res, path) => {
-    const hashRegExp = /\.[0-9a-f]{8,21}\./
+    const hashRegExp = /\.[0-9a-f]{8,20}\./
 
     if (path.endsWith('.html')) {
       res.setHeader('Cache-Control', 'no-cache');
-    } else if (hashRegExp.test(path)) {
-      res.setHeader('Cache-Control', 'max-age=31536001');
-      console.log('testataan toimiiko')
+    } else if (hashRegExp.test(path) || /favicon/.test(path)) {
+      res.setHeader('Cache-Control', 'public, max-age=31536001');
+      console.log('Cached')
     }
   },
 }));

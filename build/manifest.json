@@ -2,7 +2,7 @@
   "name": "Kalapäiväkirja",
   "icons": [
     {
-      "src": "app-icon-rounded.png",
+      "src": "app-icon-round.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"

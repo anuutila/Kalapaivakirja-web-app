@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const Entry = require('./models/entry')
 
+app.use(express.static('build'))
 app.use(bodyParser.json())
 app.use(cors())
 

@@ -8,7 +8,7 @@
       "purpose": "any"
     },
     {
-      "src": "maskable-app-icon.png",
+      "src": "app-icon-maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

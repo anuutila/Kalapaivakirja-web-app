@@ -7,20 +7,20 @@ const Entry = require('./models/entry')
 app.use(bodyParser.json())
 app.use(cors())
 
-app.use(express.static('build', {
-  etag: true,
-  lastModified: true,
-  setHeaders: (res, path) => {
-    const hashRegExp = /\.[0-9a-f]{8,20}\./
+// app.use(express.static('build', {
+//   etag: true,
+//   lastModified: true,
+//   setHeaders: (res, path) => {
+//     const hashRegExp = /\.[0-9a-f]{8,20}\./
 
-    if (path.endsWith('.html')) {
-      res.setHeader('Cache-Control', 'no-cache');
-    } else if (hashRegExp.test(path) || /favicon/.test(path)) {
-      res.setHeader('Cache-Control', 'public, max-age=31536001');
-      console.log('Cached')
-    }
-  },
-}));
+//     if (path.endsWith('.html')) {
+//       res.setHeader('Cache-Control', 'no-cache');
+//     } else if (hashRegExp.test(path) || /favicon/.test(path)) {
+//       res.setHeader('Cache-Control', 'public, max-age=31536001');
+//       console.log('Cached')
+//     }
+//   },
+// }));
 
 const logger = (request, response, next) => {
   console.log('Method:', request.method)
@@ -120,7 +120,7 @@ app.post('/api/entries', (request, response) => {
 app.put('/api/entries/:id', (request, response) => {
   const body = request.body
 
-  const regex = /^\-?[0-9]+\.[0-9]{2,},\s[0-9]+\.[0-9]{2,}$|^$/
+  const regex = /^\-?[0-9]{1,2}\.[0-9]{2,10},\s\-?[0-9]{1,3}\.[0-9]{2,10}$|^$/
 
   if (!regex.test(body.coordinates)) {
     return response.status(400).json({error: 'Koordinaattien formaatti virheellinen\nOikea muoto: "xx.xxxxxxx, yy.yyyyyyy" tai tyhjä\n(huomaa välilyönti)'})

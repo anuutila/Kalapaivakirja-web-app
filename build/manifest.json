@@ -2,21 +2,45 @@
   "name": "Kalapäiväkirja",
   "icons": [
     {
-      "src": "app-icon-round.png",
+      "src": "/src/images/icons/kalapaivakirja-icon512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "app-icon-maskable.png",
+      "src": "/src/images/icons/kalapaivakirja-maskable-icon512x512.png",
       "sizes": "512x512",
       "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/src/images/icons/kalapaivakirja-icon192x192.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/src/images/icons/kalapaivakirja-maskable-icon192x192.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/src/images/icons/kalapaivakirja-icon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 144x144 256x256 288x288 512x512 1024x1024",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/src/images/icons/kalapaivakirja-maskable-icon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 144x144 256x256 288x288 512x512 1024x1024",
+      "type": "image/svg+xml",
       "purpose": "maskable"
     }
   ],
   "start_url": "/",
   "id": "/",
   "display": "standalone",
-  "theme_color": "#202124",
-  "background_color": "#343434"
+  "theme_color": "#1e1e1e",
+  "background_color": "#0096e7"
 }

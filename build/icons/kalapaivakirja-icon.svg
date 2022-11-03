@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="135.46667mm"
+   height="135.46696mm"
+   viewBox="0 0 135.46667 135.46696"
+   version="1.1"
+   id="svg2961"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="kalapaivakirja-icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2963"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.77771465"
+     inkscape:cx="394.10342"
+     inkscape:cy="405.03288"
+     inkscape:window-width="3440"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2958">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3012"
+       id="linearGradient3014"
+       x1="135.46666"
+       y1="4.9999999e-06"
+       x2="-0.2574366"
+       y2="135.39981"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.99999774,0,0,0.99999782,0.64840725,41.132787)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3012">
+      <stop
+         style="stop-color:#66c9ff;stop-opacity:1"
+         offset="0"
+         id="stop3008" />
+      <stop
+         style="stop-color:#0096e7;stop-opacity:1"
+         offset="0.49666235"
+         id="stop29446" />
+      <stop
+         style="stop-color:#005b8c;stop-opacity:1"
+         offset="1"
+         id="stop3010" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient33022"
+       id="linearGradient33024"
+       x1="316.73227"
+       y1="195.26772"
+       x2="110.49999"
+       y2="401.5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.32912784,0,0,0.32912785,-15.875137,24.609241)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient33022">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.30000001"
+         offset="0"
+         id="stop33018" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop33020" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="fill_between_many"
+       method="originald"
+       linkedpaths="#path13461,0,1"
+       id="path-effect13500"
+       is_visible="true"
+       lpeversion="0"
+       join="true"
+       close="true"
+       autoreverse="true"
+       applied="false" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient33762"
+       id="linearGradient33764"
+       x1="68.05761"
+       y1="88.175987"
+       x2="68.05761"
+       y2="67.409058"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2439477,0,0,1.2439478,-15.875137,24.609241)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient33762">
+      <stop
+         style="stop-color:#dbdbdb;stop-opacity:1"
+         offset="0"
+         id="stop33758" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop33760" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Taso 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.64810925,-41.132499)">
+    <rect
+       style="fill:url(#linearGradient3014);fill-opacity:1;stroke:none;stroke-width:1.1557;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect5413"
+       width="135.46637"
+       height="135.46637"
+       x="0.6484077"
+       y="41.132793"
+       ry="67.733185"
+       inkscape:export-filename="C:\Users\Akseli\Documents\Random\kalapaivakirja-logot\valmiit\kalapaivakirja-icon192x192.png"
+       inkscape:export-xdpi="36"
+       inkscape:export-ydpi="36" />
+    <path
+       id="path31295"
+       style="fill:url(#linearGradient33024);fill-opacity:1;stroke:none;stroke-width:0.329128px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 67.553629,73.051458 31.179858,98.91371 18.550865,88.397044 1.4638582,98.293379 c -0.53544195,3.443761 -0.81574895,6.974091 -0.81574895,10.572591 0,37.52419 30.20929575,67.73349 67.73347975,67.73349 4.714539,0 9.313186,-0.47827 13.751373,-1.38659 L 119.56032,110.0507 100.06786,95.138383 73.404646,91.010142 Z"
+       inkscape:export-filename="C:\Users\Akseli\Documents\Random\kalapaivakirja-logot\valmiit\kalapaivakirja-icon192x192.png"
+       inkscape:export-xdpi="36"
+       inkscape:export-ydpi="36" />
+    <path
+       inkscape:original-d="M 0.64811449,41.132499"
+       inkscape:path-effect="#path-effect13500"
+       d="M 0.64811449,41.132499"
+       id="path13502"
+       inkscape:export-filename="C:\Users\Akseli\Documents\Random\kalapaivakirja-logot\valmiit\kalapaivakirja-maskable-icon192x192.png"
+       inkscape:export-xdpi="36"
+       inkscape:export-ydpi="36" />
+    <path
+       style="fill:url(#linearGradient33764);fill-opacity:1;stroke:none;stroke-width:0.304095;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 59.92927,136.90474 c -0.112951,-0.0361 -0.337583,-0.19067 -0.499134,-0.3435 -0.161552,-0.15283 -3.197717,-3.80842 -6.747049,-8.12353 l -6.453314,-7.84567 -0.954034,-0.74607 c -1.354087,-1.05893 -2.861328,-2.34248 -4.015301,-3.41935 -0.546379,-0.50988 -1.014763,-0.90335 -1.040836,-0.87439 -0.02612,0.029 -0.192688,0.2716 -0.370249,0.53921 -0.513999,0.77466 -1.48281,2.05325 -2.304202,3.04095 -0.911415,1.09598 -3.098549,3.29894 -4.112379,4.14216 -3.762444,3.12928 -7.852905,5.28749 -12.733236,6.71837 -1.180046,0.34597 -1.599729,0.31305 -2.134091,-0.16738 -0.35572,-0.31982 -0.504682,-0.65851 -0.503401,-1.14456 9.83e-4,-0.3322 0.05672,-0.48759 0.623715,-1.73335 2.342528,-5.14734 3.733324,-9.30857 4.492368,-13.441 0.454041,-2.47196 0.465112,-2.57617 0.465112,-4.37897 0,-1.45435 -0.01841,-1.78757 -0.140889,-2.5544 -0.848012,-5.30816 -2.06672,-9.181186 -4.803542,-15.265586 -0.597169,-1.327602 -0.642648,-1.455771 -0.639401,-1.802205 0.0062,-0.680907 0.45164,-1.26873 1.106093,-1.460249 0.404942,-0.118499 0.559652,-0.09577 1.771282,0.260268 7.887189,2.317649 14.271017,6.996881 18.967765,13.903022 l 0.443978,0.65283 1.013494,-0.9356 c 3.859347,-3.562742 7.618023,-6.21497 12.371445,-8.729651 0.393038,-0.20793 0.714624,-0.397517 0.714624,-0.42131 0,-0.0238 -0.502804,-1.029933 -1.117339,-2.235877 -0.614548,-1.205941 -1.151647,-2.296566 -1.19358,-2.423611 -0.09765,-0.295694 -0.0469,-0.796878 0.111582,-1.102803 0.06717,-0.129708 0.2953,-0.40293 0.506946,-0.607161 1.27736,-1.23259 14.65909,-13.331928 14.883984,-13.457619 0.37148,-0.207629 0.951383,-0.217743 1.344197,-0.02345 0.591348,0.292504 2.507525,2.190726 3.914741,3.878068 2.422103,2.904256 4.574357,6.472709 5.963423,9.887454 l 0.286295,0.703778 1.228436,0.07021 c 7.057749,0.40338 14.006549,2.283594 20.429727,5.527902 6.84835,3.459071 12.89368,8.31481 18.06889,14.51332 0.73858,0.88463 0.88909,1.14066 0.93563,1.59169 0.0549,0.53131 -0.0823,0.81192 -0.8496,1.73835 -3.00498,3.62817 -6.25869,6.7414 -9.92821,9.49954 -6.63956,4.99053 -14.343028,8.41486 -22.191182,9.86436 -5.814808,1.07395 -11.12996,1.1487 -17.34119,0.24386 l -0.729824,-0.10635 -0.912287,0.92712 c -1.013817,1.0303 -2.191761,2.10341 -3.420109,3.11569 -1.12183,0.92452 -3.036452,2.35579 -3.330807,2.48994 -0.272923,0.1244 -0.846258,0.14166 -1.178504,0.0355 z m 44.53371,-28.05548 c 1.20989,-0.31062 2.19862,-1.27172 2.50046,-2.43058 0.1879,-0.7214 0.0774,-1.60908 -0.28689,-2.30293 -0.26598,-0.50671 -0.88381,-1.1114 -1.42042,-1.39018 -1.40962,-0.73233 -3.12193,-0.48008 -4.22228,0.62202 -1.318558,1.32065 -1.305938,3.26644 0.0297,4.59409 0.45391,0.45118 0.8865,0.70365 1.52273,0.88871 0.4724,0.13741 1.37939,0.14653 1.87662,0.0189 z"
+       id="path23976"
+       inkscape:export-filename="C:\Users\Akseli\Documents\Random\kalapaivakirja-logot\valmiit\kalapaivakirja-icon192x192.png"
+       inkscape:export-xdpi="36"
+       inkscape:export-ydpi="36" />
+  </g>
+</svg>

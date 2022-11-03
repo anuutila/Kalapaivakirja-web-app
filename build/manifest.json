@@ -15,25 +15,25 @@
     },
     {
       "src": "/icons/kalapaivakirja-icon192x192.png",
-      "sizes": "512x512",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
       "src": "/icons/kalapaivakirja-maskable-icon192x192.png",
-      "sizes": "512x512",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
       "src": "/icons/kalapaivakirja-icon.svg",
-      "sizes": "48x48 72x72 96x96 128x128 144x144 256x256 288x288 512x512 1024x1024",
+      "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
       "src": "/icons/kalapaivakirja-maskable-icon.svg",
-      "sizes": "48x48 72x72 96x96 128x128 144x144 256x256 288x288 512x512 1024x1024",
+      "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "maskable"
     }

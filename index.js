@@ -3,6 +3,8 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const Entry = require('./models/entry')
+const { validateEntryInput } = require('./utils/validation')
+const { default: mongoose } = require('mongoose')
 
 app.use(express.static('build'))
 app.use(bodyParser.json())
@@ -52,59 +54,73 @@ app.get('/api/entries', (request, response) => {
   Entry
     .find({}, {__v: 0})
     .then(entries => {
-      response.setHeader('Cache-Control', 'no-cache');
       response.json(entries.map(formatEntry))
     })
     .catch(error => {
-      console.log(error)
+      console.error(error)
+      response.status(500).json({ error: `failed to retrieve entries, ${error}`})
     })
 })
 
 app.get('/api/entries/:id', (request, response) => {
+  const id = request.params.id
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return response.status(400).json({ error: 'invalid id' })
+  }
   Entry
-    .findById(request.params.id)
+    .findById(id)
     .then(entry => {
       if (entry) {
         response.json(formatEntry(entry))
       } else {
-        response.status(404).end()
+        response.status(404).json({ error: 'entry not found' })
       }
     })
     .catch(error => {
-      console.log(error)
-      response.status(400).send({ error: 'malformatted id' })
+      console.error(error)
+      response.status(500).json({ error: `failed to retrieve entry, ${error}` })
     })
 })
 
 app.delete('/api/entries/:id', (request, response) => {
+  const id = request.params.id
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return response.status(400).json({ error: 'invalid id' })
+  }
   Entry
-    .findByIdAndRemove(request.params.id)
-    .then(result => {
+    .findByIdAndRemove(id)
+    .then(entry => {
+      if (!entry) {
+        return response.status(404).json({ error: 'entry not found' })
+      }
       response.status(204).end()
     })
     .catch(error => {
-      console.log(error)
-      response.status(400).send({ error: 'malformatted id' })
+      console.error(`failed to delete entry with id ${id}, ${error}`)
+      response.status(400).send({ error: `failed to delete entry with id ${id}, ${error}` })
     })
 })
 
 app.post('/api/entries', (request, response) => {
   const body = request.body
-  
-  if (!body.fish || !body.date || !body.person) {
-    return response.status(400).json({error: 'kalalaji, päivämäärä tai saajan nimi puuttuu'})
+
+  // Validate the user inputted values
+  const validationError = validateEntryInput(body);
+  if (validationError) {
+    console.error(validationError)
+    return response.status(400).json({error: validationError})
   }
 
   const entry = new Entry({
-    fish: body.fish,
+    fish: body.fish.trim(),
     date: body.date,
     length: body.length || "-",
     weight: body.weight || "-",
-    lure: body.lure || "-",
-    place: body.place || "-",
-    coordinates: body.coordinates || "-",
-    time: body.time || "-",
-    person: body.person
+    lure: body.lure.trim() || "-",
+    place: body.place.trim() || "-",
+    coordinates: body.coordinates.trim() || "-",
+    time: body.time,
+    person: body.person.trim()
   })
 
   entry
@@ -114,29 +130,30 @@ app.post('/api/entries', (request, response) => {
       response.json(savedAndFormattedEntry)
     })
     .catch(error => {
-      console.log(error)
+      console.error(error)
     })
 })
 
 app.put('/api/entries/:id', (request, response) => {
   const body = request.body
 
-  const regex = /^\-?[0-9]{1,2}\.[0-9]{2,10},\s\-?[0-9]{1,3}\.[0-9]{2,10}$|^$/
-
-  if (!regex.test(body.coordinates)) {
-    return response.status(400).json({error: 'Koordinaattien formaatti virheellinen\nOikea muoto: "xx.xxxxxxx, yy.yyyyyyy" tai tyhjä\n(huomaa välilyönti)'})
+  // Validate the user inputted values
+  const validationError = validateEntryInput(body);
+  if (validationError) {
+    console.error(validationError)
+    return response.status(400).json({error: validationError})
   }
 
   const entry = {
-    fish: body.fish,
+    fish: body.fish.trim(),
     date: body.date,
     length: body.length || "-",
     weight: body.weight || "-",
-    lure: body.lure || "-",
-    place: body.place || "-",
-    coordinates: body.coordinates || "-",
+    lure: body.lure.trim() || "-",
+    place: body.place.trim() || "-",
+    coordinates: body.coordinates.trim() || "-",
     time: body.time || "-",
-    person: body.person
+    person: body.person.trim()
   }
 
   Entry
@@ -145,7 +162,7 @@ app.put('/api/entries/:id', (request, response) => {
       response.json(formatEntry(updatedEntry))
     })
     .catch(error => {
-      console.log(error)
+      console.error(error)
     })
 
 })  

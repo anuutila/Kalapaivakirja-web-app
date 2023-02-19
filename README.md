@@ -1,6 +1,6 @@
-# Kalakalenteri
+# Kalapäiväkirja
 
-Web-applikaatio kalasaaliiden kirjaamista varten.
+Web-sovellus kalasaaliiden kirjaamista varten.
 
 
 

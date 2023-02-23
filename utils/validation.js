@@ -42,6 +42,11 @@ function validateEntryInput(entryObject) {
     return "erota kalalajin nimen osat toisistaan vain yhdellä välilyönnillä.";
   }  
 
+  // Ensure that the date is in YYYY-MM-DD format.
+  if (!/^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/.test(entryObject.date)) {
+    return 'päivämäärän formaatti virheellinen\nOikea muoto: "vvvv-kk-pp"';
+  }
+
   if (!/^\-?[0-9]{1,2}\.[0-9]{2,10},\s\-?[0-9]{1,3}\.[0-9]{2,10}$|^$/.test(entryObject.coordinates)) {
     return 'koordinaattien formaatti virheellinen\nOikea muoto: "xx.xxxxxxx, yy.yyyyyyy" tai tyhjä\n(huomaa välilyönti)';
   }

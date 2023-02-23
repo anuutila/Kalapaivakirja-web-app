@@ -44,7 +44,12 @@ function validateEntryInput(entryObject) {
 
   // Ensure that the date is in YYYY-MM-DD format.
   if (!/^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/.test(entryObject.date)) {
-    return 'päivämäärän formaatti virheellinen\nOikea muoto: "vvvv-kk-pp"';
+    return 'päivämäärän formaatti virheellinen, oikea muoto: "vvvv-kk-pp"';
+  }
+
+  // Ensure that the time is in HH:MM format.
+  if (!/^[0-9]{2}\:[0-9]{2}$/.test(entryObject.time)) {
+    return 'kellonajan formaatti virheellinen, oikea muoto: "hh:mm"';
   }
 
   if (!/^\-?[0-9]{1,2}\.[0-9]{2,10},\s\-?[0-9]{1,3}\.[0-9]{2,10}$|^$/.test(entryObject.coordinates)) {

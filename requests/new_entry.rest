@@ -1,13 +1,14 @@
-POST http://localhost:3001/entries
+POST https://kalapaivakirja.herokuapp.com/api/entries
 Content-Type: application/json
 
 {
-    "fish": "k",
-    "date": "5",
-    "length": 4,
-    "weigh": 0,
-    "lure": "mikado",
-    "place": "kivikko",
-    "time": "16.30",
-    "person": "Aks"
+    "fish": "Ahven",
+    "date": "2020-12-10",
+    "length": "-",
+    "weight": "-",
+    "lure": "Hunter shad 3,5\" smelt",
+    "place": "Palosaaren syv\u00e4nne",
+    "coordinates": "-",
+    "time": "20.0",
+    "person": "Akseli"
 }

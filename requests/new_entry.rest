@@ -4,11 +4,11 @@ Content-Type: application/json
 {
     "fish": "Ahven",
     "date": "2020-12-10",
-    "length": "-",
-    "weight": "-",
+    "length": "",
+    "weight": "",
     "lure": "Hunter shad 3,5\" smelt",
     "place": "Palosaaren syv\u00e4nne",
-    "coordinates": "-",
-    "time": "20.0",
+    "coordinates": "",
+    "time": "20:05",
     "person": "Akseli"
 }

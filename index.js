@@ -112,7 +112,7 @@ app.post('/api/entries', (request, response) => {
   }
 
   const entry = new Entry({
-    fish: body.fish.trim(),
+    fish: body.fish.trim().toLowerCase(),
     date: body.date,
     length: body.length || "-",
     weight: body.weight || "-",
@@ -120,7 +120,7 @@ app.post('/api/entries', (request, response) => {
     place: body.place.trim() || "-",
     coordinates: body.coordinates.trim() || "-",
     time: body.time,
-    person: body.person.trim()
+    person: (body.person.charAt(0).toUpperCase() + body.person.slice(1).toLowerCase()).trim()
   })
 
   entry

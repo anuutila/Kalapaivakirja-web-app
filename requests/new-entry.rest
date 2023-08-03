@@ -1,0 +1,15 @@
+POST http://localhost:3001/api/entries
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3RpIFRlcHBvIiwiaWQiOiI2NGNhYWM1OWExOGM3ZmNkZjBmOTgyMWQiLCJpYXQiOjE2OTEwODg0NzZ9.RrxZq9FT_T9v6CUNdkjyftNolWIqC9wAry65hdxUrpo
+
+{
+    "fish": "Ahven",
+    "date": "2020-12-20",
+    "length": "",
+    "weight": "",
+    "lure": "Mikado fishunter tt 7 cm 348",
+    "place": "Palosaaren syv\u00e4nne",
+    "coordinates": "",
+    "time": "20:05",
+    "person": "akseli"
+}

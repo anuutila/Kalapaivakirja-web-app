@@ -301,7 +301,7 @@ app.post('/api/login', async (request, response) => {
 
   response
     .status(200)
-    .send({ token, username: user.username, privilege: user.privilege })
+    .send({ token: token, username: user.username, privilege: user.privilege })
 })
 
 const getTokenFrom = (request) => {
